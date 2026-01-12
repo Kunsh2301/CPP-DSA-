@@ -1,0 +1,12 @@
+# Ignore executables
+*.exe
+*.out
+*.a
+*.o
+
+# Ignore build folders (optional)
+build/
+bin/
+
+# Ignore OS files
+.DS_Store
