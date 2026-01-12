@@ -8,7 +8,7 @@ with **clear explanations and optimized approaches**.
 - Use the per-question README template
 - Write clean and readable C++ code
 - Mention time and space complexity
-  
+
 ---
 
 ## 📁 Repository Structure
