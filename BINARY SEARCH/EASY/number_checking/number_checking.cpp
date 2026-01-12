@@ -27,3 +27,8 @@ bool binarysearch(vector<int>&arr,int target){
     }
     return false;
 }
+
+/* CONSTRAINTS 
+1. Array is sorted 
+2. values can be upto 10^9
+*/
