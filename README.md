@@ -8,10 +8,11 @@ with **clear explanations and optimized approaches**.
 
 ## 📁 Repository Structure
 Each problem is stored in its own folder:
-
+<pre>
 question/
 ├── README.md // Well-structured explanation of the problem
 └── solution.cpp // Clean C++ implementation
+<pre/>
 
 ---
 
