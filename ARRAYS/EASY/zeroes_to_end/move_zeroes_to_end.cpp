@@ -1,3 +1,4 @@
+// wap to move all zeroes to the end of the array without destroying order of other elements
 #include<iostream>
 #include<vector>
 using namespace std;
