@@ -1,4 +1,4 @@
-// WAP to find single element in sorted array which contains duplicate elements except the one to be find.
+// WAP to find single element in sorted array which contains duplicate elements except the one to be find
 #include<iostream>
 #include<vector>
 using namespace std;
