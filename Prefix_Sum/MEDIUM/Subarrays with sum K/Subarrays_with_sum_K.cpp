@@ -2,6 +2,7 @@
 find the number of subarrays whose sum exactly equal to a given number k.*/
 #include <vector>
 #include <unordered_map>
+#include <iostream>
 using namespace std;
 int optimized(vector<int> &nums, int k)
 {
@@ -54,8 +55,19 @@ int brute_force(vector<int> &nums, int k)
 }
 int main()
 {
-    vector<int> nums = {1, 1, 1};
-    int k = 2;
+    cout<<"Enter the size of the array: ";
+    int n;
+    cin>>n;
+    vector<int> nums(n);
+    cout<<"Enter the elements of the array: ";
+    for (int i = 0; i < n; i++)
+    {
+        cin>>nums[i];
+    }
+    cout<<"Enter the target sum: ";
+    int k;
+    cin>>k;
     int ans = optimized(nums, k);
+    cout<<ans;
     return 0;
 }

@@ -7,6 +7,7 @@
 Given an unsorted array of integers `arr` and an integer `k`, determine the number of contiguous subarrays whose elements sum exactly to `k`.
 
 Input format:
+
 - First line: integer `n` (size of array)
 - Second line: `n` integers (array elements)
 - Third line: integer `k` (target sum)
@@ -28,6 +29,7 @@ A naive way is to consider all possible subarrays and compute their sum. However
 5. After both loops complete, `count` holds the number of valid subarrays.
 
 ### Complexity of Brute Force
+
 - Time: O(n^2) for iterating over all subarrays, plus O(n) if summing naively (resulting in O(n^3) total) or O(1) per subarray with prefix sums.
 - Space: O(n) if using a prefix array, otherwise O(1).
 
@@ -56,19 +58,22 @@ If `prefix[i]` is the sum of elements up to index `i`, then any subarray ending 
 ---
 
 ## Algorithm
-1. Read integer `n` and array `arr` of length `n`.
-2. Read target `k`.
-3. Initialize a map `freq` with `freq[0] = 1` to account for subarrays starting at index 0.
-4. Initialize `prefix = 0` and `count = 0`.
-5. For each element `x` in `arr`:
+
+1. Prompt the user and read integer `n` (size of the array) from stdin.
+2. Prompt and read the `n` integers into `arr`.
+3. Prompt and read the target `k`.
+4. Initialize a map `freq` with `freq[0] = 1` to account for subarrays starting at index 0.
+5. Initialize `prefix = 0` and `count = 0`.
+6. For each element `x` in `arr`:
    - `prefix += x`.
    - If `(prefix - k)` exists in `freq`, `count += freq[prefix - k]`.
    - Increment `freq[prefix]`.
-6. Print or return `count`.
+7. Output the computed `count` to stdout.
 
 ---
 
 ## 🧪 Dry Run
+
 ### Example Input:
 
 ```
@@ -78,6 +83,7 @@ If `prefix[i]` is the sum of elements up to index `i`, then any subarray ending 
 ```
 
 Execution steps:
+
 - Start with `freq = {0:1}`, `prefix=0`, `count=0`.
 - Read 1: `prefix=1`; `prefix-k = -1` not in map; add `freq[1]=1`.
 - Read 1: `prefix=2`; `prefix-k = 0` exists with count 1 → `count = 1`; add `freq[2]=1`.
@@ -94,6 +100,7 @@ Two subarrays meet the condition: `[1,1]` starting at index 0 and `[1,1]` starti
 ---
 
 ## ⏱️ Complexity Analysis
+
 - Time Complexity: O(n)
 - Space Complexity: O(n) extra space for the hash map
 
@@ -102,10 +109,12 @@ Two subarrays meet the condition: `[1,1]` starting at index 0 and `[1,1]` starti
 ## Compile & Run (example)
 
 ```bash
-# input (example):
-3
-1 1 1
+# Example session (user input shown after prompts):
+Enter the size of the array: 3
+Enter the elements of the array: 1 1 1
+Enter the target sum: 2
+# Program outputs:
 2
 ```
 
-The program will output `2` for the above input.
+The program asks for inputs interactively and prints the resulting count.
